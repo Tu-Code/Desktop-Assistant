@@ -1,5 +1,5 @@
 # Desktop-Assistant
-What it does:
+### What it does:
 1. Executable python application that uses voice-recognition software to listen for, and execute commands (runs on any device) 💻
 1. Monitors desktop resources (on-site or remotely) in real-time and returns stats to user 📝
 1. Comes with REST-API and web-socket channel
