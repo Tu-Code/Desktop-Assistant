@@ -4,20 +4,18 @@ import datetime #for fetching date and time
 import time
 import wikipedia
 import random
-# import mixer fix mixer issue 
 import webbrowser
 import smtplib, ssl
 import subprocess #shut down or restart
 import playsound # to play saved mp3 file 
 from gtts import gTTS # google text to speech 
 import os # to save/open files 
-# import wolframalpha # to calculate strings into formula
+import wolframalpha # to calculate strings into formula
 from selenium import webdriver # to control browser operations
 import pyjokes
-import wolframalpha 
 import pyaudio
 from ecapture import ecapture as ec 
-# from pygame import mixer #what version fixes this?
+from pygame import mixer 
 #playsound 1.2.2
 def talk():
     input=sr.Recognizer()
@@ -43,13 +41,13 @@ def respond(output):
     playsound.playsound(file, True)  
     os.remove(file)
     # num = 0
-# def playMusic(): 
-#    music_folder = r'C:\Users\solar\Music' 
-#    music = os.listdir(music_folder) 
-#    random_music = music_folder + random.choice(music) 
-#    mixer.init() 
-#    mixer.music.load(random_music) 
-#    mixer.music.play()
+def playMusic(): 
+   music_folder = r'C:\Users\solar\Music' 
+   music = os.listdir(music_folder) 
+   random_music = music_folder + random.choice(music) 
+   mixer.init() 
+   mixer.music.load(random_music) 
+   mixer.music.play()
    
 def find(name, path):
     for root, files in os.walk(path):

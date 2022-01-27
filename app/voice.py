@@ -6,8 +6,8 @@ if __name__=='__main__':
     clear()
     respond("Hi, I'm Sam, how can I help you?")
     respond('''Here are some of my commands
-                search for best dishes for dinner
-                turn on camera
+                search for best dishes for dinner,
+                turn on camera,
                 get desktop resources''')
 
           
@@ -44,6 +44,10 @@ if __name__=='__main__':
         elif "what's your name" in content or "What is your name" in content:
             respond("My friends call me Sam")
             print("My friends call me Sam")
+
+        elif "who" in content and ('made' in content or 'created' in content) and "you" in content:
+            respond("I was created by Sarah")
+            print("I was created by sarah.")
 
         elif 'search'  in content:
             content = content.replace("search", "")
@@ -85,9 +89,9 @@ if __name__=='__main__':
             respond("Gmail is open")
             time.sleep(5)
 
-        # if 'play music' in content or 'play a song' in content :
-        #     respond("Here's your music. Enjoy !")
-        #     playMusic() fix mixer issue
+        if 'play music' in content or 'play a song' in content :
+            respond("Here's your music. Enjoy !")
+            playMusic()
         
         elif 'send a mail' in content or 'send email' in content:
             try:
@@ -142,12 +146,12 @@ if __name__=='__main__':
         elif "process" in content:
             print(process_info())
 
-        elif 'get' in content and 'resources' in content:
+        elif ('get' in content or 'show' in content) and 'resources' in content:
             respond('Printing desktop resources to screen.')
             get_all_resources()
-        # if "shut down" in content:
-        #     respond("Ok , your system will shut down in 10 secs")
-        #     subprocess.call(["shutdown", "/l"])  
+        if "shut down" in content:
+            respond("Ok , your system will shut down in 10 secs")
+            subprocess.call(["shutdown", "/l"])  
 
         else:
-           respond("Application not available")
+           respond("Sorry, I'm unable to complete that task at the moment.")
