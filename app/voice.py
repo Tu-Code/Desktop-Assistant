@@ -56,7 +56,7 @@ if __name__=='__main__':
         
         elif "calculate" or "what is" in content: 
             question=talk()
-            app_id="API key"
+            app_id="4RE8EL-8AX3V66GGE" #my wolfram alpha app id (api key)
             client = wolframalpha.Client(app_id)
             res = client.content(question)
             answer = next(res.results).content
