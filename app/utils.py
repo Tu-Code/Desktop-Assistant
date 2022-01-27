@@ -14,8 +14,9 @@ import os # to save/open files
 # import wolframalpha # to calculate strings into formula
 from selenium import webdriver # to control browser operations
 import pyjokes
-# import wolframalpha
+import wolframalpha 
 import pyaudio
+from ecapture import ecapture as ec 
 # from pygame import mixer #what version fixes this?
 #playsound 1.2.2
 def talk():
