@@ -29,3 +29,7 @@
   This returns a list of processes and their information
  
   *Example of how to check usign voice recognition: "what's my battery percent", "show connected devices", "show all computer resources", etc.*
+  
+### Images
+![resource_monitor](https://user-images.githubusercontent.com/83554169/167685789-a76ff71c-6665-4ae1-9241-94e032b362f8.png)
+
